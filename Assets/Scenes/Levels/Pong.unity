@@ -976,6 +976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed56fb6e6598d14885972e748eccfa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 288032386}
+  score: {fileID: 8300000, guid: b64206e021bd49f4fa71665b05a8a0f2, type: 3}
 --- !u!1 &1094957468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1236,10 @@ MonoBehaviour:
   pong_ingredient: {fileID: 11400000, guid: 147830f252ee277429c4fc6af79d004a, type: 2}
   audioSource: {fileID: 288032386}
   win: {fileID: 8300000, guid: c516a577489ee824da64a11d234acdac, type: 3}
+  player_score: 0
+  computer_score: 0
+  player_start_position: {x: 0, y: 0, z: 0}
+  computer_start_position: {x: 0, y: 0, z: 0}
 --- !u!4 &1346467790
 Transform:
   m_ObjectHideFlags: 0
@@ -1388,6 +1394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed56fb6e6598d14885972e748eccfa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 288032386}
+  score: {fileID: 8300000, guid: b64206e021bd49f4fa71665b05a8a0f2, type: 3}
 --- !u!1 &1527061910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,6 +1529,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 304683761}
   computer: {fileID: 1534591266}
+  ball: {fileID: 1961018012}
+  speed: 10
 --- !u!50 &1534591266
 Rigidbody2D:
   serializedVersion: 4
@@ -1551,7 +1561,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1534591263}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9c747c7dbe821284d8762c98f5fb811e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1754,7 +1764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 860, y: 380}
+  m_AnchoredPosition: {x: 820, y: 380}
   m_SizeDelta: {x: 193.35, y: 171.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1746836477
@@ -1894,7 +1904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: 380}
+  m_AnchoredPosition: {x: -820, y: 380}
   m_SizeDelta: {x: 193.35, y: 171.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808016515
@@ -2147,6 +2157,8 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0, z: 0}
   audioSource: {fileID: 288032386}
   tap: {fileID: 8300000, guid: 0a73f6f9cec614b4a933c8121e695aaa, type: 3}
+  x: 0
+  y: 0
 --- !u!1 &2068935663
 GameObject:
   m_ObjectHideFlags: 0
