@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class Selection : MonoBehaviour
+public class CharacterSelection : MonoBehaviour
 {
 
     [SerializeField] private List<Sprite> girls, boys;
