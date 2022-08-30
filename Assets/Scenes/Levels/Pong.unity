@@ -405,6 +405,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 304683761}
   computer: {fileID: 1534591266}
+  ball: {fileID: 0}
+  speed: 10
 --- !u!50 &304683761
 Rigidbody2D:
   serializedVersion: 4

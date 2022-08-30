@@ -8,7 +8,7 @@ public class Paddle : MonoBehaviour
     [SerializeField] private Rigidbody2D player;
     [SerializeField] private Rigidbody2D computer, ball;
 
-    private float speed = 10f;
+    private float speed = 15f;
 
     private void Start() {
         LaunchComputer();   // computer goes up a bit and then bounces up and down just like the ball does

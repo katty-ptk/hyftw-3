@@ -336,7 +336,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b58442efe8dba664bac56c6615575866, type: 2}
-  m_sharedMaterial: {fileID: -2100137890415262102, guid: b58442efe8dba664bac56c6615575866,
+  m_sharedMaterial: {fileID: 3121589362195451972, guid: b58442efe8dba664bac56c6615575866,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -655,8 +655,12 @@ MonoBehaviour:
   - {fileID: 1985223143}
   - {fileID: 1617146015}
   - {fileID: 104643997}
-  story_text: {fileID: 0}
-  story: []
+  story_text: {fileID: 931356848}
+  story:
+  - a fost odata
+  - ca niciodata
+  - un buton
+  - minunat :D
 --- !u!4 &1296398469
 Transform:
   m_ObjectHideFlags: 0
