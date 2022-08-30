@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 42d44610e38b5dc4bbbdf7ae2894043b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Pong.unity
+    guid: c21ac7f726e5df3468684011019c4d17
+  - enabled: 1
+    path: Assets/Scenes/Levels/MarioGame.unity
+    guid: 3329923d01da1d249aa9c3b9b020dae9
   m_configObjects: {}

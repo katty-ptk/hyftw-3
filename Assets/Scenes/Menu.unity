@@ -396,8 +396,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1928504388}
-        m_TargetAssemblyTypeName: MenuScrptSkip, Assembly-CSharp
-        m_MethodName: SkipIntro
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928504386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 358e9bd1c2e2de44ca3c0af56151eacd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f1a5998ceef85d40b890e049b6a9832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2027548539
