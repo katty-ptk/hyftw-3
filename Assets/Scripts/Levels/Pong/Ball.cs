@@ -19,6 +19,17 @@ public class Ball : MonoBehaviour
         startPosition = transform.position;
         Launch();
     }
+    
+    // Getter used in Goal.cs to up the speed of the ball
+    public float Speed {
+        get {
+            return speed;
+        }
+
+        set {
+            speed = value;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if ( collision.gameObject.CompareTag("Player")) {

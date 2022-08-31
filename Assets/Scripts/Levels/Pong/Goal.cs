@@ -12,6 +12,8 @@ public class Goal : MonoBehaviour
             audioSource.clip = score;
             audioSource.Play();
 
+            collision.GetComponent<Ball>().Speed += 1; // up the speed of ball
+
             if ( gameObject.name == "Goal_Right" ){
                 GameObject.Find("GameManager").GetComponent<PongLevelManager>().PlayerScored();
             } else {
