@@ -406,7 +406,6 @@ MonoBehaviour:
   player: {fileID: 304683761}
   computer: {fileID: 1534591266}
   ball: {fileID: 0}
-  speed: 10
 --- !u!50 &304683761
 Rigidbody2D:
   serializedVersion: 4
@@ -1238,10 +1237,6 @@ MonoBehaviour:
   pong_ingredient: {fileID: 11400000, guid: 147830f252ee277429c4fc6af79d004a, type: 2}
   audioSource: {fileID: 288032386}
   win: {fileID: 8300000, guid: c516a577489ee824da64a11d234acdac, type: 3}
-  player_score: 0
-  computer_score: 0
-  player_start_position: {x: 0, y: 0, z: 0}
-  computer_start_position: {x: 0, y: 0, z: 0}
 --- !u!4 &1346467790
 Transform:
   m_ObjectHideFlags: 0
@@ -1532,7 +1527,6 @@ MonoBehaviour:
   player: {fileID: 304683761}
   computer: {fileID: 1534591266}
   ball: {fileID: 1961018012}
-  speed: 10
 --- !u!50 &1534591266
 Rigidbody2D:
   serializedVersion: 4
@@ -2159,8 +2153,6 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0, z: 0}
   audioSource: {fileID: 288032386}
   tap: {fileID: 8300000, guid: 0a73f6f9cec614b4a933c8121e695aaa, type: 3}
-  x: 0
-  y: 0
 --- !u!1 &2068935663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!223 &2068935664
 Canvas:
   m_ObjectHideFlags: 0

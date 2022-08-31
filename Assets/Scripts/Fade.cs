@@ -21,6 +21,7 @@ public class Fade : MonoBehaviour
     }
 
     public void FadeIn() {
+        img_parent.gameObject.SetActive(true);
         image.DOFade(1f, 1f);
     }
 
