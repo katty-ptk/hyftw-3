@@ -675,7 +675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 304683761}
   computer: {fileID: 1534591266}
-  ball: {fileID: 0}
+  ball: {fileID: 1961018012}
 --- !u!50 &304683761
 Rigidbody2D:
   serializedVersion: 4
@@ -706,7 +706,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 304683758}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9c747c7dbe821284d8762c98f5fb811e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   player_text: {fileID: 1808016513}
   computer_text: {fileID: 1635397408}
   win_text: {fileID: 729926761}
-  collent_ingredient: {fileID: 1343710132}
+  collect_ingredient: {fileID: 1343710132}
   fade_canvas: {fileID: 2068935664}
   win_canvas: {fileID: 1746836480}
   inventory: {fileID: 11400000, guid: 2cbb8c04054466342860b5e9142267a7, type: 2}

@@ -20,7 +20,7 @@ public class PongLevelManager : MonoBehaviour
     [Header("UI Text")]
     [SerializeField] private GameObject player_text;
     [SerializeField] private GameObject computer_text;
-    [SerializeField] private GameObject win_text, collent_ingredient;
+    [SerializeField] private GameObject win_text, collect_ingredient;
 
     [Header("Canvases")]
     [SerializeField] private Canvas fade_canvas, win_canvas;
@@ -98,7 +98,7 @@ public class PongLevelManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         win_text.SetActive(false);
-        collent_ingredient.SetActive(true);
+        collect_ingredient.SetActive(true);
     }
 
     public void CollectIngredient(){
