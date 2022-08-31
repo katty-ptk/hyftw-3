@@ -46,7 +46,7 @@ public class PongLevelManager : MonoBehaviour
     }
 
     private void Update(){
-        if (player_score == 1) {
+        if (player_score == 10) {
             Win();
             player_score = 0;
         }
