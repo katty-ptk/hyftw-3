@@ -19,12 +19,18 @@ public class Inventory : ScriptableObject {
     // FUNCTIONS
 
     // metoda ( functia ) principala pentru adaugarea unui ingredient in inventar
-    public void addIngredient( Ingredient ingredient, Transform container, Sprite potionSprite ) {       
-        foreach (Transform child in container) {
-            if (!child.GetChild(0).GetComponent<SpriteRenderer>().sprite) {  // daca slotul este gol
-                child.GetChild(0).GetComponent<SpriteRenderer>().sprite = potionSprite; // se adauga ingredientul in slot-ul respectiv printr-un sprite primit ca parametru
-                break;
+    public void addIngredient( Ingredient ingredient, Transform container, Sprite potionSprite ) {
+
+        ingredients.Add(ingredient);
+
+        if ( container.tag != "test" ){
+            foreach (Transform child in container){
+                if (!child.GetChild(0).GetComponent<SpriteRenderer>().sprite){  // daca slotul este gol
+                    child.GetChild(0).GetComponent<SpriteRenderer>().sprite = potionSprite; // se adauga ingredientul in slot-ul respectiv printr-un sprite primit ca parametru
+                    break;
+                }
             }
         }
+        
     }
 }

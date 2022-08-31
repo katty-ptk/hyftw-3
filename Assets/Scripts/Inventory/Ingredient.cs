@@ -4,8 +4,7 @@ using UnityEngine;
 
 [ CreateAssetMenu( fileName = "Ingredient", menuName = "Ingredient" ) ]
 public class Ingredient : ScriptableObject {
-    [SerializeField] private string ingredientName;
-    [SerializeField] private int level;
+    [SerializeField] private string ingredientName, level;
 
     // GETTERS & SETTERS
     public string IngredientName {
@@ -13,7 +12,7 @@ public class Ingredient : ScriptableObject {
     }
 
     // FUNCTIONS
-    public int Level {
+    public string Level {
         get { return level; }
     }
 }
