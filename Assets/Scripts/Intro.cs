@@ -46,7 +46,7 @@ public class Intro : MonoBehaviour
             return;
         }
 
-        if (click_to_learn.gameObject.active) click_to_learn.gameObject.SetActive(false);   // if player clicked once, the info text disappears
+        if (click_to_learn.isActiveAndEnabled) click_to_learn.gameObject.SetActive(false);   // if player clicked once, the info text disappears
 
         image_index += 1;
         intro_images[image_index].DOFade(1f, 0.5f);
