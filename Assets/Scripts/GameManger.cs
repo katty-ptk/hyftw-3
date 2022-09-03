@@ -12,6 +12,4 @@ public class GameManger : MonoBehaviour
         playersprite = selectedskin.GetComponent<SpriteRenderer>().sprite;
         player.GetComponent<SpriteRenderer>().sprite = playersprite;
     }
-
-    
 }
