@@ -40,13 +40,12 @@ public class PongLevelManager : MonoBehaviour
     private Vector3 player_start_position, computer_start_position;
 
     private void Start() {
-        Debug.Log(win_canvas.gameObject.transform.GetChild(0));
         player_start_position = player.GetComponent<Transform>().position;
         computer_start_position = computer.GetComponent<Transform>().position;
     }
 
     private void Update(){
-        if (player_score == 10) {
+        if (player_score == 5) {
             Win();
             player_score = 0;
         }
@@ -55,7 +54,7 @@ public class PongLevelManager : MonoBehaviour
     private void ResetPosition(){
         ball.GetComponent<Ball>().Reset();  // spawns ball to (0, 0)
         player.GetComponent<Transform>().position = player_start_position;
-        computer.GetComponent<Transform>().position = computer_start_position;
+        computer.GetComponent<ComputerPaddle>().ResetPosition();
     }
 
     private void FreezePositions(){
