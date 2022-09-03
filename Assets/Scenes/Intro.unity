@@ -422,7 +422,6 @@ GameObject:
   - component: {fileID: 931356847}
   - component: {fileID: 931356849}
   - component: {fileID: 931356848}
-  - component: {fileID: 931356850}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -498,8 +497,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -548,22 +547,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931356846}
   m_CullTransparentMesh: 1
---- !u!114 &931356850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931356846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2872d26e84823f944a561432ec541df5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayBeforeStart: 0
-  timeBtwChars: 0.1
-  leadingChar: 
-  leadingCharBeforeDelay: 0
 --- !u!1 &982590166
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,10 +924,11 @@ MonoBehaviour:
   skip: {fileID: 1594975436}
   click_to_learn: {fileID: 702869147}
   story:
-  - a fost odata
-  - ca niciodata
-  - un buton
-  - minunat :D
+  - 'POV: It''s the 2000s and all the kids go crazy about arcade games.'
+  - But in the best place with arcade game machines, there is a machiene that takes
+    you to a new world!
+  - You only have to press a button
+  - THE button ...
 --- !u!4 &1296398469
 Transform:
   m_ObjectHideFlags: 0
@@ -1061,7 +1045,7 @@ RectTransform:
   - {fileID: 982590167}
   - {fileID: 702869149}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

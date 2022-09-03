@@ -32,8 +32,13 @@ public class Intro : MonoBehaviour
     private IEnumerator DisplayLine( string line ) {
         story_text.text = ""; // empty the text
         audioSource.Play();
+        audioSource.loop = true;
 
         foreach ( char letter in line.ToCharArray() ) {
+
+            // if the line has finished loading, stop typing sounds
+            if (System.Array.IndexOf(line.ToCharArray(), letter) == line.ToCharArray().Length - 1)
+                audioSource.Stop();
             story_text.text += letter;
             yield return new WaitForSeconds(0.1f);
         }
