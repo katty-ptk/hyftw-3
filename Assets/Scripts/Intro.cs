@@ -28,11 +28,16 @@ public class Intro : MonoBehaviour
     private string nextScene = "CharacterSelection";
 
     private void Awake() {
+
+        story = story_RO;
+
+        /*
         if (Application.systemLanguage == SystemLanguage.English)
             story = story_EN;
 
         if (Application.systemLanguage == SystemLanguage.Romanian)
             story = story_RO;
+        */
     }
 
     private void Start(){
