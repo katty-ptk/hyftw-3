@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/MarioGame.unity
     guid: 3329923d01da1d249aa9c3b9b020dae9
+  - enabled: 1
+    path: Assets/Scenes/Levels/ChickenInvaders.unity
+    guid: 65228b33fb709ea409bd3d5ac3c843de
   m_configObjects: {}
