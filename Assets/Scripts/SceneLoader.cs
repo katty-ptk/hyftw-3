@@ -17,4 +17,8 @@ public class SceneLoader : MonoBehaviour
     public void LoadPong() {
         SceneManager.LoadScene("Pong");
     }
+
+    public void LoadChickenInvaders() {
+        SceneManager.LoadScene("ChickenInvaders");
+    }
 }

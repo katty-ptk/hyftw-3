@@ -19,7 +19,6 @@ public class SpaceshipMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -31,8 +30,7 @@ public class SpaceshipMovement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
+    void FixedUpdate() {
         body.velocity = new Vector2(horizontal * speed, vertical * speed); // spaceship movement based on input
 
         if ( isShooting ) { // if space was pressed
@@ -40,5 +38,12 @@ public class SpaceshipMovement : MonoBehaviour
             child.GetComponent<Bullet>().LaunchBullet(child.gameObject);    // shoot
             Instantiate(child, transform);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("gift")) {
+            manager.GetComponent<ChickenInvadersManager>().UpdateScore();
+            Destroy(collision.gameObject);
+        }    
     }
 }

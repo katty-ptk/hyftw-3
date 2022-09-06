@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 7144619943084333294}
   - component: {fileID: 5544014268845031126}
   - component: {fileID: 1047334630521714358}
-  - component: {fileID: 9032541091903595571}
   m_Layer: 0
   m_Name: drumstick
-  m_TagString: Untagged
+  m_TagString: gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,16 +154,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9032541091903595571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5836459559301381338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0298d875d3e1e4e80192d2c056200a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 4421568612855143729, guid: d743dd814f2776c4cacb60756fda79f6, type: 3}
