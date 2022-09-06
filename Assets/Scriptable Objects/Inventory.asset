@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: 5f0ee15bb75500d44bee0829b295e30b, type: 2}
   - {fileID: 11400000, guid: 72438f8cbf1af4b4a93467e9cc25603a, type: 2}
+  - {fileID: 11400000, guid: 75d2934f2d0de56489a712030302cb53, type: 2}

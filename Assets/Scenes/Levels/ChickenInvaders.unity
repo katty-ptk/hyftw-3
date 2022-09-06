@@ -1103,8 +1103,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCanas: {fileID: 2141926151}
   collectIngredient: {fileID: 1733376644}
+  giftsManager: {fileID: 943875369}
+  inventory_container: {fileID: 3478031509848555173, guid: 610d6d6607278a641817c265c8d5648b,
+    type: 3}
   scoreText: {fileID: 181268316}
   winText: {fileID: 1977858494}
+  inventory: {fileID: 11400000, guid: 2cbb8c04054466342860b5e9142267a7, type: 2}
+  ingredient: {fileID: 11400000, guid: 75d2934f2d0de56489a712030302cb53, type: 2}
 --- !u!4 &1048042880
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,6 +1460,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "ou\u0219or de g\u0103inu\u0219\u0103"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891172269330294683, guid: dbdde9fe0fa167e4f897d32f51ae3661,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1048042879}
+    - target: {fileID: 5891172269330294683, guid: dbdde9fe0fa167e4f897d32f51ae3661,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CollectIngredient
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891172269330294683, guid: dbdde9fe0fa167e4f897d32f51ae3661,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChickenInvadersManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
