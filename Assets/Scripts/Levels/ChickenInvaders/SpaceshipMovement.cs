@@ -24,10 +24,6 @@ public class SpaceshipMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         isShooting = Input.GetKeyDown(KeyCode.Space);
-
-        if ( Input.GetKey(KeyCode.Tab)){
-            manager.GetComponent<ChickenInvadersManager>().Win();
-        }
     }
 
     void FixedUpdate() {

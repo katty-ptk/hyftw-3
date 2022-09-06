@@ -23,7 +23,7 @@ public class Inventory : ScriptableObject {
 
         ingredients.Add(ingredient);
 
-        if ( container.tag != "test" ){
+        if ( container.tag == "test" ){
             foreach (Transform child in container){
                 if (!child.GetChild(0).GetComponent<SpriteRenderer>().sprite){  // daca slotul este gol
                     child.GetChild(0).GetComponent<SpriteRenderer>().sprite = potionSprite; // se adauga ingredientul in slot-ul respectiv printr-un sprite primit ca parametru

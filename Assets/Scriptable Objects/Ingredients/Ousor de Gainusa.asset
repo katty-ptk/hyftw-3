@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 240471f04771a6c48b0d4dfcd0fc08f2, type: 3}
-  m_Name: Floare de Mai
+  m_Name: Ousor de Gainusa
   m_EditorClassIdentifier: 
-  ingredientName: Floare de Mai
-  level: test
+  ingredientName: Ousor de Gainusa
+  level: ChickenInvaders
