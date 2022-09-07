@@ -7,6 +7,9 @@ using DG.Tweening;
 public class ChickenInvadersManager : MonoBehaviour
 {
     [SerializeField] private GameObject winCanas, collectIngredient, giftsManager, inventory_container;
+    [SerializeField] private GameObject chickenBoss;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip chicken_boss_clip, win_clip, bg_music;
     [SerializeField] private TextMeshProUGUI scoreText, winText;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Ingredient ingredient;
@@ -21,12 +24,21 @@ public class ChickenInvadersManager : MonoBehaviour
     public void UpdateScore() {
         score += 1;
         scoreText.text = score.ToString();
-        if (score == 10)
-            Win();
+        if (score == 5)
+            ShowChickenBoss();
     }
 
-    private void Win() {
+    private void ShowChickenBoss() {
+        audioSource.clip = chicken_boss_clip;
+        audioSource.Play();
+        chickenBoss.SetActive(true);
+        chickenBoss.transform.DOScale(1f, 1f);
+    }
+
+    public void Win() { 
         giftsManager.GetComponent<GiftsSpawn>().StopAllCoroutines();
+      //audioSource.clip = win_clip;
+        //dioSource.Play();
         winCanas.SetActive(true);
         winText.DOFade(1f, 0.5f);
         StartCoroutine(WaitAndShowCollect());
