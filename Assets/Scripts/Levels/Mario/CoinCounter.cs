@@ -5,11 +5,11 @@ using UnityEngine;
 public class CoinCounter : MonoBehaviour
 {
     public int coinCount = 0;
-    private AudioSource audioS;
+    public AudioSource audioS;
     public AudioClip coinsound;
     void Start()
     {
-        audioS = GetComponent<AudioSource>();
+       // audioS = GetComponent<AudioSource>();
       
     }
     public void AddCoin()

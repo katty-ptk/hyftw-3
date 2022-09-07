@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-	public CoinCounter coinCounter;
+	public GameObject coinCounter;
 
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (other.gameObject.tag == "Player")
+		if (collider.gameObject.tag == "Player")
 		{
 			
-		 coinCounter.AddCoin();
+		 coinCounter.GetComponent<CoinCounter>(). AddCoin();
 		 Debug.LogWarning("un banut");
 			
 			Destroy(this.gameObject);
