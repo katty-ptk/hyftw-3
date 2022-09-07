@@ -6,7 +6,7 @@ public class Coin : MonoBehaviour
 {
 	public GameObject coinCounter;
 
-	void OnTriggerEnter2D(Collider2D collider)
+	void OnTriggerEnter2D(BoxCollider2D collider)
 	{
 		if (collider.gameObject.tag == "Player")
 		{

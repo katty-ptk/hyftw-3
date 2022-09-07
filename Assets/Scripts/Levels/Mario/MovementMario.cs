@@ -17,10 +17,11 @@ public class MovementMario : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (Input.GetButtonDown("Jump") || IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpPower);
         }
+
         if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
@@ -32,7 +33,7 @@ public class MovementMario : MonoBehaviour
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
         }
-        bool IsGrounded()
+         private bool IsGrounded()
         {
             return Physics2D.OverlapCircle(GroundCheck.position, 0.2f, GroundLayer);
         }
