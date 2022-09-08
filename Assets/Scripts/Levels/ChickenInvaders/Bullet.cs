@@ -39,5 +39,9 @@ public class Bullet : MonoBehaviour
         if ( collision.gameObject.CompareTag("chicken")) {  // if bullet touched chicken
             collision.gameObject.transform.DOScale(0f, 0.3f); // transition into disappearing
         }
+
+        if (collision.gameObject.CompareTag("chickenBoss")) {
+            collision.gameObject.transform.DOScale(0f, 0.3f);
+        }
     }
 }
