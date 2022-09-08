@@ -11,16 +11,18 @@ public class Coin : MonoBehaviour
 	//CircleCollider2D body = gameObject.GetComponent<CircleCollider2D>();
 
 //BoxCollider2D collider2D = new BoxCollider2D
+    
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if (collider.gameObject.tag == "Player")
 		{
 			
-         coinCounter.GetComponent<CoinCounter>(). AddCoin0();
-		 Debug.LogWarning("un banut");
+         coinCounter.GetComponent<CoinCounter>(). AddCoin1();
+		 Debug.Log("un banut");
 			
-			Destroy(this.gameObject);
+		Destroy(this.gameObject);
 		 
 		}
 	}
+	
 }

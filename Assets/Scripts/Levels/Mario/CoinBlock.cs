@@ -25,7 +25,7 @@ public class CoinBlock : MonoBehaviour {
 		if (col.collider.bounds.max.y < transform.position.y
 			&& col.collider.bounds.min.x < transform.position.x + 0.5f
 			&& col.collider.bounds.max.x > transform.position.x -0.5f
-			&& col.collider.tag == "Player") {
+			&& col.collider.tag == "Head") {
 				if (totalCoins > 0) {
 					//spriteAnim.Play ("coinblock_hit");
 					//audioS.Play();
