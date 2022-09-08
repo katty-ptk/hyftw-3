@@ -5,7 +5,7 @@ using TMPro;
 
 public class CoinCounter : MonoBehaviour
 {
-    public int coinCount = 0;
+    public double coinCount = 0;
     public AudioSource audioS;
     public AudioClip coinsound;
     public TextMeshProUGUI cointext;
@@ -14,7 +14,15 @@ public class CoinCounter : MonoBehaviour
        // audioS = GetComponent<AudioSource>();
       
     }
-    public void AddCoin()
+    public void AddCoin0()
+    {
+        audioS.clip = coinsound;
+        audioS.Play();
+        coinCount += 0.5;
+        cointext.text = coinCount.ToString("00");	
+
+    }
+    public void AddCoin1()
     {
         audioS.clip = coinsound;
         audioS.Play();
