@@ -38,10 +38,16 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if ( collision.gameObject.CompareTag("chicken")) {  // if bullet touched chicken
             collision.gameObject.transform.DOScale(0f, 0.3f); // transition into disappearing
+            StartCoroutine(WaitAndDestroyChicken(collision.gameObject));
         }
 
         if (collision.gameObject.CompareTag("chickenBoss")) {
             collision.gameObject.transform.DOScale(0f, 0.3f);
         }
+    }
+
+    private IEnumerator WaitAndDestroyChicken( GameObject chicken) {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(chicken);
     }
 }

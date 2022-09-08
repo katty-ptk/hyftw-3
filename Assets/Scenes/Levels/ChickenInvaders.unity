@@ -1257,6 +1257,7 @@ MonoBehaviour:
   inventory_container: {fileID: 3478031509848555173, guid: 610d6d6607278a641817c265c8d5648b,
     type: 3}
   chickenBoss: {fileID: 437124882}
+  chickensManager: {fileID: 811796451}
   audioSource: {fileID: 1979635599}
   chicken_boss_clip: {fileID: 8300000, guid: 8dcf8b0e20fa047439fdd63e94f4cdc4, type: 3}
   win_clip: {fileID: 8300000, guid: d7770808d8f6b6745bd344d7108df7da, type: 3}

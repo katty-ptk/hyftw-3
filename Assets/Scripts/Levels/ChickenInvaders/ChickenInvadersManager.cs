@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.PlayerLoop;
 
 public class ChickenInvadersManager : MonoBehaviour
 {
     [SerializeField] private GameObject winCanas, collectIngredient, giftsManager, inventory_container;
-    [SerializeField] private GameObject chickenBoss;
+    [SerializeField] private GameObject chickenBoss, chickensManager;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip chicken_boss_clip, win_clip, bg_music;
     [SerializeField] private TextMeshProUGUI scoreText, winText;
@@ -19,13 +20,19 @@ public class ChickenInvadersManager : MonoBehaviour
     private void Start() {
         score = 0;
         scoreText.text = score.ToString();
+        
+    }
+
+    private void Update(){
+        if ( chickensManager.transform.childCount == 1 ) {
+            ShowChickenBoss();
+            enabled = false;
+        }
     }
 
     public void UpdateScore() {
         score += 1;
         scoreText.text = score.ToString();
-        if (score == 5)
-            ShowChickenBoss();
     }
 
     private void ShowChickenBoss() {
