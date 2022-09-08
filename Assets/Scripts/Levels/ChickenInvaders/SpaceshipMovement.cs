@@ -14,26 +14,24 @@ public class SpaceshipMovement : MonoBehaviour
 
     [SerializeField] private  float speed = 10f;
 
-    void Start()
-    {
+    void Start() {
         body = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
-    {
+    void Update() {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         isShooting = Input.GetKeyDown(KeyCode.Space);
-    }
 
-    void FixedUpdate() {
-        body.velocity = new Vector2(horizontal * speed, vertical * speed); // spaceship movement based on input
-
-        if ( isShooting ) { // if space was pressed
+        if (isShooting && transform.GetChild(0)) { // if space was pressed
             Transform child = transform.GetChild(0);
             child.GetComponent<Bullet>().LaunchBullet(child.gameObject);    // shoot
             Instantiate(child, transform);
         }
+    }
+
+    void FixedUpdate() {
+        body.velocity = new Vector2(horizontal * speed, vertical * speed); // spaceship movement based on input
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
