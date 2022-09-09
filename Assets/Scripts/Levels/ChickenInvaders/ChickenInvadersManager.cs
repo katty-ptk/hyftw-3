@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
-using UnityEngine.PlayerLoop;
 
 public class ChickenInvadersManager : MonoBehaviour
 {
@@ -44,8 +43,6 @@ public class ChickenInvadersManager : MonoBehaviour
 
     public void Win() { 
         giftsManager.GetComponent<GiftsSpawn>().StopAllCoroutines();
-      //audioSource.clip = win_clip;
-        //dioSource.Play();
         winCanas.SetActive(true);
         winText.DOFade(1f, 0.5f);
         StartCoroutine(WaitAndShowCollect());

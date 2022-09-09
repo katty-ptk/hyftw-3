@@ -7,10 +7,15 @@ public class ChickenBoss : MonoBehaviour
     [SerializeField] private GameObject manager, giftsManager;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip win_clip;
+    [SerializeField] private GiftsSpawn giftsSpawnScript;
+
+    private void Start() {
+        giftsSpawnScript = giftsManager.GetComponent<GiftsSpawn>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision) { 
         if (collision.CompareTag("bullet")) {
-            giftsManager.GetComponent<GiftsSpawn>().StartCoroutine(giftsManager.GetComponent<GiftsSpawn>().Spawn());
+            giftsSpawnScript.StartCoroutine(giftsSpawnScript.Spawn());
             audioSource.clip = win_clip;
             audioSource.Play();
             manager.GetComponent<ChickenInvadersManager>().Win();
