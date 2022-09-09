@@ -11,7 +11,7 @@ public class GiftsSpawn : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
-    IEnumerator Spawn(){
+    public IEnumerator Spawn(){
         while (true) {
             var wanted = Random.Range(left_limit, right_limit);
             var position = new Vector3(wanted, transform.position.y);
