@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEditor;
 
 public class Bullet : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class Bullet : MonoBehaviour
     private bool isLaunching = false;
 
     [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private Sprite bullet_2;
+
+    private void Start()
+    {
+
+      //  gameObject.GetComponent<SpriteRenderer>().sprite = bullet_2;
+
+    }
 
     private void FixedUpdate() {
         if ( !isLaunching && gameObject != null ) {
