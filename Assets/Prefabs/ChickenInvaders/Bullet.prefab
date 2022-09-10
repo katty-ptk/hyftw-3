@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  shot_clip: {fileID: 8300000, guid: 69a7af43f29eb544fa2cc12c68e64802, type: 3}
   bullet_2: {fileID: 21300000, guid: 4db67164e0c521941ae5f4c083ff3978, type: 3}
 --- !u!50 &3709134769953101347
 Rigidbody2D:

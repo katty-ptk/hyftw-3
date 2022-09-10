@@ -12,15 +12,9 @@ public class Bullet : MonoBehaviour
     private bool isLaunching = false;
 
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip shot_clip;
 
     [SerializeField] private Sprite bullet_2;
-
-    private void Start()
-    {
-
-      //  gameObject.GetComponent<SpriteRenderer>().sprite = bullet_2;
-
-    }
 
     private void FixedUpdate() {
         if ( !isLaunching && gameObject != null ) {
@@ -30,6 +24,7 @@ public class Bullet : MonoBehaviour
 
     public void LaunchBullet( GameObject bullet ) {
         if (bullet != null ) {
+            audioSource.clip = shot_clip;
             audioSource.Play();
             bullet.transform.DOMoveY(target.y, 0.5f);   // smooth shot
             isLaunching = true; // this bullet will not keep following the spaceship
@@ -52,7 +47,7 @@ public class Bullet : MonoBehaviour
         }
 
         if (collision.gameObject.CompareTag("chickenBoss")) {
-            collision.gameObject.transform.DOScale(0f, 0.3f);
+           // collision.gameObject.transform.DOScale(0f, 0.3f);
         }
     }
 
