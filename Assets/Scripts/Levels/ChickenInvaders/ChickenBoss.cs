@@ -13,6 +13,11 @@ public class ChickenBoss : MonoBehaviour
     private void Start()
     {
         giftsSpawnScript = giftsManager.GetComponent<GiftsSpawn>();
+        InvokeRepeating("MoveRandomly", 1.0f, 2.0f);
+    }
+
+    private void MoveRandomly() {
+        GetComponent<Transform>().DOMove(new Vector3(Random.Range(-8, 8), Random.Range(0, 4.25f), 0), 0.4f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +28,7 @@ public class ChickenBoss : MonoBehaviour
             audioSource.clip = win_clip;
             audioSource.Play();
 
-            if (gameObject.transform.localScale.x <= 0f)
+            if (gameObject.transform.localScale.x <= 0.2f)
             {
                 Destroy(gameObject);
                 manager.GetComponent<ChickenInvadersManager>().Win();
