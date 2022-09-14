@@ -60,11 +60,14 @@ velocity.x = Mathf.MoveTowards(velocity.x, InputAxis*speed, speed* Time.deltaTim
 private  void FixedUpdate()
 {
     Vector2 position = rb.position;
-    position += velocity* Time.fixedDeltaTime;
+    
+  
+position += velocity* Time.fixedDeltaTime;
     
     Vector2 Stanga = camera.ScreenToWorldPoint(Vector2.zero);
     Vector2 Dreapta = camera.ScreenToWorldPoint(new Vector2(Screen.width,Screen.height));
     position.x = Mathf.Clamp(position.x,Stanga.x+0.5f,Dreapta.x-0.5f);
+
     rb.MovePosition(position);
 
 }
