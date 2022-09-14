@@ -1847,7 +1847,7 @@ GameObject:
   - component: {fileID: 491157071}
   - component: {fileID: 491157070}
   m_Layer: 5
-  m_Name: Value
+  m_Name: ResolutionValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2903,7 +2903,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 734811245}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928504390}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: PreviousResolution
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &734811245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3294,7 +3306,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 798929364}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928504390}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: NextResolution
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &798929364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7945,6 +7969,7 @@ GameObject:
   - component: {fileID: 1928504387}
   - component: {fileID: 1928504388}
   - component: {fileID: 1928504389}
+  - component: {fileID: 1928504390}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -7993,6 +8018,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1380367224}
   img_parent: {fileID: 72179583}
+--- !u!114 &1928504390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928504386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd357119785fe7740b8ecc9b0bb053d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullscreen_toggle: {fileID: 1370218794}
+  vsync_toggle: {fileID: 776881265}
+  resolutionItems:
+  - horizontal: 1920
+    vertical: 1080
+  - horizontal: 1280
+    vertical: 720
+  - horizontal: 854
+    vertical: 480
+  resolution_text: {fileID: 491157070}
 --- !u!1 &1990756438
 GameObject:
   m_ObjectHideFlags: 0
@@ -8357,6 +8404,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1928504390}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Save
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
