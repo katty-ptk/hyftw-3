@@ -15,6 +15,10 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private AudioSource music_source, sound_effects_source;
     [SerializeField] private Slider music_slider, sound_effects_slider, master_slider;
 
+    [Header("Language")]
+    [SerializeField] private GameObject language_button;
+    [SerializeField] private Sprite EN, RO;
+
     private int selected_resolution_value;
 
     private void Start() {
@@ -70,6 +74,25 @@ public class MenuManager : MonoBehaviour
             resolutionItems[selected_resolution_value].vertical,
             fullscreen_toggle.isOn
         );
+    }
+
+    public void ToggleLanguage() {
+        string current_language = language_button.name;
+        Debug.Log(current_language);
+
+        switch( current_language) {
+            case "EN":
+                language_button.GetComponent<Image>().sprite = RO;
+                language_button.name = "RO";
+                // actually change language
+                break;
+
+            case "RO":
+                language_button.GetComponent<Image>().sprite = EN;
+                language_button.name = "EN";
+                // actually change language
+                break;
+        }
     }
 }
 
