@@ -76,9 +76,12 @@ public class MenuManager : MonoBehaviour
         );
     }
 
+    public void Exit() {
+        Application.Quit();
+    }
+
     public void ToggleLanguage() {
         string current_language = language_button.name;
-        Debug.Log(current_language);
 
         switch( current_language) {
             case "EN":
