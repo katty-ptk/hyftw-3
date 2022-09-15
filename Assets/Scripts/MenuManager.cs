@@ -11,6 +11,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private List<ResolutionItem> resolutionItems;
     [SerializeField] private TextMeshProUGUI resolution_text;
 
+/*
+    [Header("Sprites")]
+    [SerializeField] private Sprite sound_off_sprite, sound_on_sprite;
+*/
+
     [Header("Audio")]
     [SerializeField] private AudioSource music_source, sound_effects_source;
     [SerializeField] private Slider music_slider, sound_effects_slider, master_slider;
@@ -63,6 +68,24 @@ public class MenuManager : MonoBehaviour
                 sound_effects_slider.value = master_slider.value;
                 sound_effects_slider.value = master_slider.value;
                 break;
+        }
+    }
+
+    public void Mute()
+    {
+        bool is_on = music_source.volume > 0;
+
+        if (is_on) {    // mute
+            music_source.volume = 0;
+            music_slider.value = 0;
+            sound_effects_source.volume = 0;
+            sound_effects_slider.value = 0;
+        } else
+        {
+            music_source.volume = 0.2f; 
+            music_slider.value = 0.2f;
+            sound_effects_source.volume = 0.2f;
+            sound_effects_slider.value = 0.2f;
         }
     }
 

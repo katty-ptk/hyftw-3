@@ -22,6 +22,11 @@ public class SceneLoader : MonoBehaviour
     public void LoadChickenInvaders() {
         SceneManager.LoadScene("ChickenInvaders");
     }
+    
+    public void LoadMario()
+    {
+        SceneManager.LoadScene("MarioGame");
+    }
 
     public void SetOption( string type ) {
         if (type == "new")
