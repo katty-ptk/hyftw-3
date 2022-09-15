@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEditor;
 
 public class Bullet : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Bullet : MonoBehaviour
     private bool isLaunching = false;
 
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip shot_clip;
+
+    [SerializeField] private Sprite bullet_2;
 
     private void FixedUpdate() {
         if ( !isLaunching && gameObject != null ) {
@@ -20,6 +24,7 @@ public class Bullet : MonoBehaviour
 
     public void LaunchBullet( GameObject bullet ) {
         if (bullet != null ) {
+            audioSource.clip = shot_clip;
             audioSource.Play();
             bullet.transform.DOMoveY(target.y, 0.5f);   // smooth shot
             isLaunching = true; // this bullet will not keep following the spaceship
@@ -37,8 +42,17 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if ( collision.gameObject.CompareTag("chicken")) {  // if bullet touched chicken
-            // Destroy(collision.gameObject);
             collision.gameObject.transform.DOScale(0f, 0.3f); // transition into disappearing
+            StartCoroutine(WaitAndDestroyChicken(collision.gameObject));
         }
+
+        if (collision.gameObject.CompareTag("chickenBoss")) {
+           // collision.gameObject.transform.DOScale(0f, 0.3f);
+        }
+    }
+
+    private IEnumerator WaitAndDestroyChicken( GameObject chicken) {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(chicken);
     }
 }
