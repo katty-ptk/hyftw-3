@@ -5090,7 +5090,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928504390}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: master
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1345185199
 GameObject:
   m_ObjectHideFlags: 0
@@ -8372,6 +8384,7 @@ MonoBehaviour:
   sound_effects_source: {fileID: 1567402331}
   music_slider: {fileID: 2046610366}
   sound_effects_slider: {fileID: 1080524068}
+  master_slider: {fileID: 1226247240}
 --- !u!1 &1990756438
 GameObject:
   m_ObjectHideFlags: 0

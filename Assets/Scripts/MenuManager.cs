@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioSource music_source, sound_effects_source;
-    [SerializeField] private Slider music_slider, sound_effects_slider;
+    [SerializeField] private Slider music_slider, sound_effects_slider, master_slider;
 
     private int selected_resolution_value;
 
@@ -51,6 +51,13 @@ public class MenuManager : MonoBehaviour
 
             case "sfx":
                 sound_effects_source.volume = sound_effects_slider.value;
+                break;
+
+            case "master":
+                music_source.volume = master_slider.value;
+                music_slider.value = master_slider.value;
+                sound_effects_slider.value = master_slider.value;
+                sound_effects_slider.value = master_slider.value;
                 break;
         }
     }
