@@ -7,6 +7,16 @@ TagManager:
   - chicken
   - gift
   - bullet
+  - Ground
+  - Head
+  - Castel
+  - Bird
+  - Pipe
+  - chickenBoss
+  - wall
+  - goal
+  - test
+  - ball
   layers:
   - Default
   - TransparentFX
@@ -17,8 +27,8 @@ TagManager:
   - Power
   - Enemy
   - ground
-  - 
-  - 
+  - pipe
+  - text
   - 
   - 
   - 

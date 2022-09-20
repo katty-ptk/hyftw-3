@@ -27,6 +27,10 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MarioGame");
     }
+    public void LoadFlappyBird()
+    {
+        SceneManager.LoadScene("FlappyBird");
+    }
 
     public void SetOption( string type ) {
         if (type == "new")
