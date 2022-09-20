@@ -8,6 +8,7 @@ public class SpaceshipMovement : MonoBehaviour
     [SerializeField] private GameObject manager;
 
     private Rigidbody2D body;
+    private ChickenInvadersManager chicken_invaders_manager;
 
     private float horizontal, vertical;
     private bool isShooting;
@@ -16,6 +17,7 @@ public class SpaceshipMovement : MonoBehaviour
 
     void Start() {
         body = GetComponent<Rigidbody2D>();
+        chicken_invaders_manager =  manager.GetComponent<ChickenInvadersManager>();        
     }
 
     void Update() {
@@ -36,8 +38,13 @@ public class SpaceshipMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("gift")) {
-            manager.GetComponent<ChickenInvadersManager>().UpdateScore();
+            chicken_invaders_manager.UpdateScore();
+         //   manager.GetComponent<ChickenInvadersManager>().UpdateScore();
             Destroy(collision.gameObject);
         }    
+
+        if (collision.CompareTag("bomb")) {
+            chicken_invaders_manager.DecreaseLife();
+        }
     }
 }

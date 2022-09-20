@@ -93,7 +93,7 @@ public class CharacterSelection : MonoBehaviour
 
         selected_skin.name = player_name.text;
 
-       // PrefabUtility.SaveAsPrefabAsset(selected_skin, "Assets/Prefabs/selectedskin.prefab");
+        PrefabUtility.SaveAsPrefabAsset(selected_skin, "Assets/Prefabs/selectedskin.prefab");
         PlayerPrefs.SetString("name", player_name.text);
 
         SceneManager.LoadScene("GameScene");
