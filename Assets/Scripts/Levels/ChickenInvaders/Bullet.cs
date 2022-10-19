@@ -6,38 +6,25 @@ using UnityEditor;
 
 public class Bullet : MonoBehaviour
 {
-    private float speed = 8f;
-    private Vector2 target = new Vector2(0.0f, 2.33f);
+    [SerializeField] private Vector2 direction = new Vector2( 0, 1 ),
+                                     velocity;
 
-    private bool isLaunching = false;
-
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip shot_clip;
+    [SerializeField] private float speed = 5f;
 
     [SerializeField] private Sprite bullet_2;
 
+    private void Start() {
+        Destroy( gameObject, 3 );
+    }
+
+    private void Update() {
+        velocity = direction * speed;
+    }
+
     private void FixedUpdate() {
-        if ( !isLaunching && gameObject != null ) {
-            transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.parent.position, speed); // keep bullets hidden behind spaceship
-        }
-    }
-
-    public void LaunchBullet( GameObject bullet ) {
-        if (bullet != null ) {
-            audioSource.clip = shot_clip;
-            audioSource.Play();
-            bullet.transform.DOMoveY(target.y, 0.5f);   // smooth shot
-            isLaunching = true; // this bullet will not keep following the spaceship
-            StartCoroutine(WaitAndDestroy(bullet));
-        }
-    }
-
-    // if the bullet reached the target, destroy it after 1 second
-    private IEnumerator WaitAndDestroy( GameObject bulletToDestroy ){
-        if (bulletToDestroy != null ) {
-            yield return new WaitForSeconds(1f);
-            Destroy(bulletToDestroy); 
-        }
+        Vector2 pos = transform.position;
+        pos += velocity * Time.deltaTime;
+        transform.position = pos;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -47,12 +34,12 @@ public class Bullet : MonoBehaviour
         }
 
         if (collision.gameObject.CompareTag("chickenBoss")) {
-           // collision.gameObject.transform.DOScale(0f, 0.3f);
+           collision.gameObject.transform.DOScale(0f, 0.3f);
         }
     }
 
     private IEnumerator WaitAndDestroyChicken( GameObject chicken) {
         yield return new WaitForSeconds(0.5f);
-        Destroy(chicken);
+       Destroy(chicken);
     }
 }

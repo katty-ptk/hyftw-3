@@ -8,7 +8,7 @@ public class ChickenBoss : MonoBehaviour
     [SerializeField] private GameObject manager, giftsManager;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip win_clip;
-    [SerializeField] private GiftsSpawn giftsSpawnScript;
+    GiftsSpawn giftsSpawnScript;
 
     private void Start()
     {

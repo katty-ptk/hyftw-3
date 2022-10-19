@@ -15,13 +15,12 @@ public class ChickenInvadersManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText, lifeText, winText, loseText;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Ingredient ingredient;
-
+    
     int score, life = 3;
 
     private void Start() {
         score = 0;
-        scoreText.text = score.ToString();
-        
+        scoreText.text = score.ToString();        
     }
 
     private void Update(){
@@ -60,10 +59,10 @@ public class ChickenInvadersManager : MonoBehaviour
         chickenBoss.SetActive(true);
         chickenBoss.transform.DOScale(1f, 1f);
 
-        if ( score > 10 && spaceship.transform.childCount > 0) {
-            for ( int i = 0; i < spaceship.transform.childCount; i++) {
+        if ( score > 10 ) {
+        /*    for ( int i = 0; i < spaceship.transform.childCount; i++) {
                 spaceship.transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = bullet_2;
-            }
+            }*/
         }
     }
 
