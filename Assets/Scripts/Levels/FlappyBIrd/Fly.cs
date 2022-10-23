@@ -11,10 +11,12 @@ public float  timer = 1f;
     private Rigidbody2D rb;
     public GameObject canvas;
     // Start is called before the first frame update
+     public FlyManager script;
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+       
     }
         
 
@@ -32,10 +34,8 @@ public float  timer = 1f;
 	{
 		if (collider.gameObject.tag == "Pipe")
 		{
-           anim.SetBool("dead", true);
-        canvas.SetActive(true);
-        Invoke("StopTime",timer);
-        Debug.Log("ai murit");
+
+            script.GameOver();
 
         }
     }
