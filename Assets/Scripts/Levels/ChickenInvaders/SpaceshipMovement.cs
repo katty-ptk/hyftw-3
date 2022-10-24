@@ -40,7 +40,8 @@ public class SpaceshipMovement : MonoBehaviour
             sfxAudioSource.Play();
 
             foreach (Gun gun in guns) {
-                gun.Shoot();
+                if ( gun && gun.isActiveAndEnabled )
+                    gun.Shoot();
             }
         }
     }
@@ -52,7 +53,6 @@ public class SpaceshipMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("gift")) {
             chicken_invaders_manager.UpdateScore();
-         //   manager.GetComponent<ChickenInvadersManager>().UpdateScore();
             Destroy(collision.gameObject);
         }    
 
