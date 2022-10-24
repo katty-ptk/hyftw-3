@@ -25,9 +25,9 @@ public class ChickenBoss : MonoBehaviour
     {
         if (collision.CompareTag("bullet"))
         {
-            gameObject.transform.DOScale(gameObject.GetComponent<Transform>().localScale - new Vector3(0.3f, 0.3f, 1f), 0.2f);
+            gameObject.transform.DOScale(gameObject.GetComponent<Transform>().localScale - new Vector3(0.2f, 0.2f, 1f), 0.2f);
 
-            if (gameObject.transform.localScale.x <= 0.2f) {
+            if (gameObject.transform.localScale.x <= 0.25f) {
                 manager.GetComponent<ChickenInvadersManager>().Win();
                 Destroy(gameObject);
                 audioSource.clip = win_clip;
