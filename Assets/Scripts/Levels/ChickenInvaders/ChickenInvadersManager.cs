@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using UnityEngine.SubsystemsImplementation;
+using UnityEngine.SceneManagement;
 
 public class ChickenInvadersManager : MonoBehaviour
 {
@@ -106,6 +107,8 @@ public class ChickenInvadersManager : MonoBehaviour
         for (int i = 0; i < inventory.Inv.Count; i++) {
             Debug.Log(inventory.Inv[i].name);
         }
+
+        SceneManager.LoadScene("Dino");
     }
 
     public void Lose() {

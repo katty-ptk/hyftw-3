@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/FlappyBird.unity
     guid: ebab2eb0e8d47b04fa1c537c2937d7d2
+  - enabled: 1
+    path: Assets/Scenes/Levels/Dino.unity
+    guid: 480d0bdcb337a6644bdcc5f1a6ff42bc
   m_configObjects: {}
