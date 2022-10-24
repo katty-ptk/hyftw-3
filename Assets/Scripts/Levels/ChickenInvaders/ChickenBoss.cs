@@ -8,11 +8,12 @@ public class ChickenBoss : MonoBehaviour
     [SerializeField] private GameObject manager, giftsManager;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip win_clip;
-    [SerializeField] private GiftsSpawn giftsSpawnScript;
+    GiftsSpawn giftsSpawnScript;
 
     private void Start()
     {
         giftsSpawnScript = giftsManager.GetComponent<GiftsSpawn>();
+        giftsSpawnScript.StartCoroutine(giftsSpawnScript.Spawn());
         InvokeRepeating("MoveRandomly", 1.0f, 2.0f);
     }
 
@@ -24,16 +25,15 @@ public class ChickenBoss : MonoBehaviour
     {
         if (collision.CompareTag("bullet"))
         {
-            giftsSpawnScript.StartCoroutine(giftsSpawnScript.Spawn());
-            audioSource.clip = win_clip;
-            audioSource.Play();
-
-            if (gameObject.transform.localScale.x <= 0.2f)
-            {
-                Destroy(gameObject);
-                manager.GetComponent<ChickenInvadersManager>().Win();
-            }
             gameObject.transform.DOScale(gameObject.GetComponent<Transform>().localScale - new Vector3(0.3f, 0.3f, 1f), 0.2f);
+
+            if (gameObject.transform.localScale.x <= 0.2f) {
+                manager.GetComponent<ChickenInvadersManager>().Win();
+                Destroy(gameObject);
+                audioSource.clip = win_clip;
+                audioSource.Play();
+            }
+
         }
     }
 }
