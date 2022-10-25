@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Dino : MonoBehaviour
 {
+    public int h;
     public GameObject stand;
     public GameObject crouch;
     Rigidbody2D rb;
     bool isjumping;
+    public GameManagerDino GameManagerDino;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class Dino : MonoBehaviour
     {
         if(Input.GetKeyDown("space") && isjumping ==false)
         {
-            rb.velocity = new Vector3(0, 20, 0);
+            rb.velocity = new Vector3(0, h, 0);
             isjumping = true;
         }
     
@@ -32,5 +34,11 @@ public class Dino : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other) {
         isjumping = false;
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag =="obstacol")
+        {
+            GameManagerDino.GameOver();
+        }
     }
 }
