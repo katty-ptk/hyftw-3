@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6790676690026931936
+--- !u!1 &368065381476518491
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4122882007691564509}
-  - component: {fileID: 4279561866985278706}
-  - component: {fileID: 691499393878568731}
-  - component: {fileID: -5975694123606148527}
+  - component: {fileID: 4575458684805807723}
+  - component: {fileID: 4619782114925321489}
+  - component: {fileID: 2175952471997881525}
+  - component: {fileID: 4301239217352944437}
+  - component: {fileID: 8519727456223881277}
   m_Layer: 0
-  m_Name: Sprites_Chrome_Dinousaur_7
+  m_Name: Sprites_Chrome_Dinousaur_2
   m_TagString: obstacol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4122882007691564509
+--- !u!4 &4575458684805807723
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790676690026931936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.43, y: -2.2, z: -0.43802753}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_GameObject: {fileID: 368065381476518491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.43, y: -0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4279561866985278706
+--- !u!212 &4619782114925321489
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790676690026931936}
+  m_GameObject: {fileID: 368065381476518491}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,24 +76,37 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1457239699, guid: 5ac8f575463d6154e8b61abaf1e9ccf2, type: 3}
+  m_Sprite: {fileID: -847270662, guid: 5ac8f575463d6154e8b61abaf1e9ccf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0416666, y: 2.0833333}
+  m_Size: {x: 1.9166666, y: 1.4166666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &691499393878568731
+--- !u!114 &2175952471997881525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368065381476518491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ca8cc70d4e1f440a742deec8153744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+--- !u!61 &4301239217352944437
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790676690026931936}
+  m_GameObject: {fileID: 368065381476518491}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -103,25 +117,32 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0416666, y: 2.0833333}
-    newSize: {x: 1.0416666, y: 2.0833333}
+    oldSize: {x: 1.9166666, y: 1.4166666}
+    newSize: {x: 1.9166666, y: 1.4166666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.86, y: 1.9}
+  m_Size: {x: 1.71, y: 1.19}
   m_EdgeRadius: 0
---- !u!114 &-5975694123606148527
-MonoBehaviour:
+--- !u!95 &8519727456223881277
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790676690026931936}
+  m_GameObject: {fileID: 368065381476518491}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ca8cc70d4e1f440a742deec8153744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3bc4e9a28e026143a7ebedd588096e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
