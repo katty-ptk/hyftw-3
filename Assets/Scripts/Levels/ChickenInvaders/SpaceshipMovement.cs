@@ -11,24 +11,38 @@ public class SpaceshipMovement : MonoBehaviour
     private ChickenInvadersManager chicken_invaders_manager;
 
     private float horizontal, vertical;
-    private bool isShooting;
 
     [SerializeField] private  float speed = 10f;
 
+    Gun[] guns;
+    bool shoot;
+
+    [SerializeField] private AudioSource sfxAudioSource;
+    [SerializeField] private AudioClip shot_clip;
+
+
     void Start() {
         body = GetComponent<Rigidbody2D>();
+        guns = gameObject.GetComponentsInChildren<Gun>();
         chicken_invaders_manager =  manager.GetComponent<ChickenInvadersManager>();        
     }
 
     void Update() {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        isShooting = Input.GetKeyDown(KeyCode.Space);
+        shoot = Input.GetKeyDown(KeyCode.Space);
 
-        if (isShooting && transform.GetChild(0)) { // if space was pressed
-            Transform child = transform.GetChild(0);
-            child.GetComponent<Bullet>().LaunchBullet(child.gameObject);    // shoot
-            Instantiate(child, transform);
+        if (shoot && transform.GetChild(0)) { // if space was pressed
+            shoot = false;
+                
+            // play sound
+            sfxAudioSource.clip = shot_clip;
+            sfxAudioSource.Play();
+
+            foreach (Gun gun in guns) {
+                if ( gun && gun.isActiveAndEnabled )
+                    gun.Shoot();
+            }
         }
     }
 
@@ -39,7 +53,6 @@ public class SpaceshipMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("gift")) {
             chicken_invaders_manager.UpdateScore();
-         //   manager.GetComponent<ChickenInvadersManager>().UpdateScore();
             Destroy(collision.gameObject);
         }    
 

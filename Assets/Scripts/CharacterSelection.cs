@@ -96,7 +96,7 @@ public class CharacterSelection : MonoBehaviour
         PrefabUtility.SaveAsPrefabAsset(selected_skin, "Assets/Prefabs/selectedskin.prefab");
         PlayerPrefs.SetString("name", player_name.text);
 
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Pong");
 
     }
 

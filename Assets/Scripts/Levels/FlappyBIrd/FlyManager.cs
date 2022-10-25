@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FlyManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class FlyManager : MonoBehaviour
         canvas.SetActive(true);
         Invoke("StopTime",timer);
         Debug.Log("ai murit");
+        SceneManager.LoadScene("ChickenInvaders");
     }
     
 }
