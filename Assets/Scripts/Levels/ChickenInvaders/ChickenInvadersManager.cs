@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
-using UnityEngine.SubsystemsImplementation;
 using UnityEngine.SceneManagement;
 
 public class ChickenInvadersManager : MonoBehaviour
@@ -88,7 +86,8 @@ public class ChickenInvadersManager : MonoBehaviour
         chickenBoss.transform.DOScale(1f, 1f);
     }
 
-    public void Win() { 
+    public void Win() {
+        loseCanvas.SetActive(false);
         giftsManager.GetComponent<GiftsSpawn>().StopAllCoroutines();
         winCanas.SetActive(true);
         winText.DOFade(1f, 0.5f);
@@ -102,11 +101,11 @@ public class ChickenInvadersManager : MonoBehaviour
     }
 
     public void CollectIngredient() {
-        inventory.addIngredient(ingredient, inventory_container.transform, collectIngredient.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite);
-
-        for (int i = 0; i < inventory.Inv.Count; i++) {
-            Debug.Log(inventory.Inv[i].name);
-        }
+        inventory.addIngredient(
+            ingredient, 
+            inventory_container.transform, 
+            collectIngredient.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite
+        );
 
         SceneManager.LoadScene("Dino");
     }

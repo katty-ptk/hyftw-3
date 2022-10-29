@@ -42,7 +42,9 @@ public class BetterMovement : MonoBehaviour {
         if(Input.GetButtonDown("Jump")){
             jumpTimer = Time.time + jumpDelay;
         }
-        animator.SetBool("onGround", onGround);
+        // AICI E O PROBLEMA DE LA CARE APAR O GRAMADA DE WARNING URI
+        //  animator.SetBool("onGround", onGround);
+        
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
     void FixedUpdate() {
