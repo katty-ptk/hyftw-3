@@ -25,7 +25,8 @@ public class ChickenBoss : MonoBehaviour
     {
         if (collision.CompareTag("bullet"))
         {
-            gameObject.transform.DOScale(gameObject.GetComponent<Transform>().localScale - new Vector3(0.2f, 0.2f, 1f), 0.2f);
+            float random_range = Random.Range(0.02f, 0.2f);
+            gameObject.transform.DOScale(gameObject.GetComponent<Transform>().localScale - new Vector3(random_range, random_range, 1f), 0.2f);
 
             if (gameObject.transform.localScale.x <= 0.25f) {
                 manager.GetComponent<ChickenInvadersManager>().Win();
